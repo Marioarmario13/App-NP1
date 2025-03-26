@@ -4,58 +4,85 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="top"
-    android:background="#506266">
+    android:gravity="center"
+    android:background="#333333">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Conversão de Medidas de Comprimento"
-        android:fontFamily="CooperPreto"
-        android:textSize="26sp"
-        android:textColor="@android:color/black"
-        android:orientation="vertical"
-        android:layout_marginBottom="50dp"
-        android:layout_marginTop="30dp"
-        />
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Calculadora de Medidas de Comprimento"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Essa ferramenta permite converter as principais medidas de comprimento"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editTextValor"
-        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@drawable/rounded_edittext"
         android:hint="Digite o valor"
         android:inputType="numberDecimal"
-        android:padding="10dp" />
+        android:padding="12dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quero converter"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
 
     <Spinner
         android:id="@+id/spinnerDe"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/white"
-        android:height="50dp"
-        />
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_spinner" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Para"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
 
     <Spinner
         android:id="@+id/spinnerPara"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/white"
-        />
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_spinner" />
 
     <Button
         android:id="@+id/buttonConverter"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Converter"
-        android:background="@drawable/rounded_button"
-        android:textColor="@android:color/white"
+        android:backgroundTint="#D3D3D3"
+        android:textColor="#000000"
+        android:textSize="19sp"
         android:layout_marginTop="20dp"
-        android:padding="12dp"/>
+        android:padding="15dp"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/textViewResultado"
@@ -64,7 +91,8 @@
         android:text="Resultado"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="#007bff"
         android:gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>

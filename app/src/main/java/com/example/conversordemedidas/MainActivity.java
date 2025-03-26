@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
         double meters = convertToMeters(input, fromUnit);
         double result = convertFromMeters(meters, toUnit);
 
-        resultText.setText(String.format("%.4f %s", result, toUnit));
+        // Usando DecimalFormat para evitar zeros extras
+        DecimalFormat df = new DecimalFormat("#.####");
+        resultText.setText(df.format(result) + " " + toUnit);
     }
 
     private double convertToMeters(double value, String unit) {
